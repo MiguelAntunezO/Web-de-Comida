@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos globales opcionales */
+body {
+  @apply bg-white text-gray-900;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+
+
+@media (min-width: 768px) {
+  .md\:h-40 {
+      height: 9rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:p-12 {
+      padding: 2rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:py-16 {
+      padding-top: 8rem !important;
+      padding-bottom: 4rem;
+  }
+  }
+  .mb-10 {
+    margin-bottom: 0.5rem;
+}
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(211 87 16);
+}
+.text-blue-600 {
+  --tw-text-opacity: 1;
+  color: rgb(211 87 16);
+}
+
+.hover\:text-blue-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(104 69 48 / var(--tw-text-opacity, 1)) !important;
+}
+
+.hover\:bg-blue-700:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgb(104 69 48 / var(--tw-bg-opacity, 1)) !important;
+}
+
+
+.hover\:text-blue-800:hover {
+  --tw-text-opacity: 1;
+  color: rgb(104 69 48 / var(--tw-text-opacity, 1)) !important;
+}
+.from-blue-700 {
+  --tw-gradient-from: #ffffff var(--tw-gradient-from-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.to-blue-900 {
+  --tw-gradient-to: #ffffff var(--tw-gradient-to-position);
+}
+
+.bg-blue-800\/60 {
+  background-color: rgba(175, 90, 30, 0);
+  
+}
+img, video {
+  max-width: 100%;
+  height: 100%;
+  /* border-radius: 20px; */
+}
+
+.p-12 {
+   padding: 0rem !important; 
+}
+
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: #a07f7b;
+}
+.my-6 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.flex {
+  display: flex;
+  /*justify-content: space-between;*/
+  /*justify-content: space-around;*/
+}
+
+.border-4 {
+ /* border-width: 43px;*/
+}
+
+.rounded-2xl {
+  border-radius: 2rem;
+}
+.rounded-xl {
+  border-radius: 3.75rem;
+}
+.max-w-6xl {
+  max-width: 65rem;
+}
+.gap-8 {
+  gap: 1rem;
+}
+.pt-12 {
+  padding-top: 2rem;
+}
+.pb-10 {
+  padding-bottom: 1rem;
+}
+
+.rounded-x1{
+  border-radius: 1rem;
+}
+.mb-8 {
+    margin-bottom: 1rem;
+}
+.min-h-screen {
+  /* min-height: 75vh;*/
+}

@@ -1,0 +1,45 @@
+@import "./navbar";
+
+:root {
+  --rojo-tomate: #e63946;
+  --verde-menta: #a8d5ba;
+  --crema-claro: #f6eedc;
+  --gris-oscuro: #333333;
+}
+
+/* Estilos globales */
+body {
+  background-color: var(--crema-claro);
+  color: var(--gris-oscuro);
+  font-family: "Poppins", sans-serif;
+}
+
+.card-receta {
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card-titulo {
+    color: var(--rojo-tomate);
+    font-weight: 600;
+  }
+
+  .card-tipo {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 0.85rem;
+    background: var(--verde-menta);
+    padding: 2px 8px;
+    border-radius: 8px;
+  }
+}

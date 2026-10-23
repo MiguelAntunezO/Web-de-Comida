@@ -1,0 +1,30 @@
+.navbar-custom {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.4s ease;
+  background: transparent;
+  padding: 1rem 0;
+
+  &.scrolled {
+    background: var(--rojo-tomate);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-brand {
+    color: var(--crema-claro) !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .nav-link {
+    color: var(--crema-claro) !important;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--verde-menta) !important;
+    }
+  }
+}

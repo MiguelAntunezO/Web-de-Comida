@@ -1,0 +1,46 @@
+// Archivo: src/styles/main.scss
+
+// 1. Usar @import para variables y parciales (Sintaxis más común y robusta)
+//    Se asume que los archivos se llaman:
+//    _variables.scss
+//    _custom.scss
+//    _navbar.scss
+//    _buttons.scss
+//    _cards.scss
+//    _hero.scss
+
+@import "variables"; 
+@import "custom"; 
+@import "navbar"; 
+@import "buttons";
+@import "cards"; // ✅ Corregida la capitalización
+@import "hero";
+
+/* Estilos generales */
+
+// Si usas variables Sass internas, puedes definir los colores así, 
+// o usar las variables CSS que tenías en el bloque :root.
+
+.app-container {
+  // Asegúrate de que este color (o la variable) exista
+  background-color: #f6eedc; 
+  min-height: 100vh;
+}
+
+.titulo-principal {
+  // Asegúrate de que este color (o la variable) exista
+  color: #e63946; 
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.subtitulo {
+  color: #333;
+  font-weight: 400;
+}
+
+.seccion-titulo {
+  color: #a8d5ba;
+  font-weight: 600;
+  letter-spacing: 1px;
+}

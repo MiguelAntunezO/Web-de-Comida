@@ -1,0 +1,187 @@
+@use 'variables';
+
+// --- SECCIÓN DE BENEFICIOS ---
+
+.benefits-section {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+
+    @media (min-width: variables.$breakpoint-md) {
+        padding: 6rem 2rem;
+    }
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: variables.$color-primary;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: variables.$color-text-dark;
+    margin-bottom: 3rem;
+}
+
+.benefits-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr; // Mobile: single column
+
+    @media (min-width: variables.$breakpoint-md) {
+        grid-template-columns: repeat(3, 1fr); // Desktop: 3 columns
+    }
+}
+
+.benefit-card {
+    background-color: variables.$color-text-light;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: variables.$rojo-tomate;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-description {
+    color: variables.$color-text-dark;
+    font-weight: 400;
+}
+
+// --- LLAMADA A LA ACCIÓN INFERIOR (CTA) ---
+
+.cta-bottom-section {
+    background-color: variables.$color-background-dark;
+    color: variables.$color-text-light;
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.cta-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary-lg {
+    // Estilo general del botón, usando las variables definidas en _buttons.scss
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: variables.$rojo-tomate;
+    color: variables.$color-text-light;
+    border: 2px solid variables.$rojo-tomate;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: darken(variables.$rojo-tomate, 8%);
+        border-color: darken(variables.$rojo-tomate, 8%);
+    }
+}
+
+// --- FOOTER ---
+
+.main-footer {
+    background-color: #222;
+    color: #ccc;
+    padding: 3rem 1rem 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    text-align: center;
+
+    @media (min-width: variables.$breakpoint-sm) {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+.footer-brand {
+    .logo-container {
+        justify-content: center;
+        margin-bottom: 0.5rem;
+        @media (min-width: variables.$breakpoint-sm) {
+            justify-content: flex-start;
+        }
+    }
+    .logo-text-footer {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: variables.$color-text-light;
+    }
+}
+
+.footer-copyright {
+    color: #999;
+    margin-top: 0.5rem;
+}
+
+.footer-links {
+    h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: variables.$color-text-light;
+        margin-bottom: 0.8rem;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        margin-bottom: 0.4rem;
+    }
+    a {
+        color: #ccc;
+        text-decoration: none;
+        transition: color 0.2s ease;
+        &:hover {
+            color: variables.$rojo-tomate;
+        }
+    }
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+    text-align: center;
+    color: #999;
+}

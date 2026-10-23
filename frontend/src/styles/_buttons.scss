@@ -1,0 +1,40 @@
+@use 'variables';
+
+.btn {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px; // Pill shape
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.1s ease;
+    white-space: nowrap;
+    border: 2px solid transparent;
+    cursor: pointer;
+    display: inline-block; // Para que Link se comporte como un bloque
+    text-align: center;
+
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+.btn-public {
+    background-color: variables.$color-secondary; // Verde para botón de acceso gratuito
+    color: variables.$color-text-light;
+    border-color: variables.$color-secondary;
+
+    &:hover {
+        background-color: darken(variables.$color-secondary, 10%);
+        border-color: darken(variables.$color-secondary, 10%);
+    }
+}
+
+.btn-premium {
+    background-color: variables.$rojo-tomate; // Rojo para botón premium
+    color: variables.$color-text-light;
+    border-color: variables.$rojo-tomate;
+
+    &:hover {
+        background-color: darken(variables.$rojo-tomate, 8%);
+        border-color: darken(variables.$rojo-tomate, 8%);
+    }
+}

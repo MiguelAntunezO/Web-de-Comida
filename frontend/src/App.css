@@ -1,0 +1,434 @@
+/* src/styles/App.css */
+
+/* === GENERAL STYLES & RESET === */
+:root {
+  /* --- Variables Existentes (HOME) --- */
+  --color-dark-blue: #2c3e50;
+  --color-green-primary: #85c88c; /* Botón 'Ver recetas' */
+  --color-red-secondary: #e74c3c; /* Botón 'Ver beneficios' y CTA */
+  --color-green-bg-light: #e6ffe6; /* Fondo suave de la sección de beneficios */
+  --color-card-bg-green: #f2fff2;
+  --color-card-bg-blue: #f2f7ff;
+  --color-card-bg-yellow: #fffdf2;
+  --color-text-dark: #333;
+  --color-text-medium: #555;
+
+  /* --- Variables Nuevas (RECETAS) --- */
+  --color-recipe-header: #e74c3c; /* Rojo de la cabecera */
+  --color-recipe-bg: #f9f6ef; /* Fondo crema de la página */
+  --color-card-bg: white;
+  --color-border-subtle: #ddd;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--color-text-dark);
+  line-height: 1.6;
+  background-color: #fff; /* Fondo blanco general */
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+/* === BUTTON STYLES === */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary { /* Verde */
+  background-color: var(--color-green-primary);
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #6fb576;
+}
+
+.btn-secondary { /* Rojo */
+  background-color: var(--color-red-secondary);
+  color: white;
+}
+.btn-secondary:hover {
+  background-color: #c0392b;
+}
+
+.btn-cta { /* Botón principal del Footer */
+  background-color: var(--color-red-secondary);
+  color: white;
+  padding: 15px 40px;
+  font-size: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.btn-cta:hover {
+  background-color: #c0392b;
+}
+
+/* === 1. HERO SECTION STYLES (Home Page) === */
+.hero-section {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.05) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px 40px;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo Styles */
+.hero-logo-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.hero-title {
+  font-size: 48px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+/* === 2. FEATURES SECTION STYLES (Home Page) === */
+.second-screen-wrapper {
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+.features-section {
+  padding: 80px 20px;
+  background-color: white;
+  text-align: center;
+  flex-grow: 1; /* Permite que ocupe el espacio sobrante */
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 60px;
+  color: var(--color-text-dark);
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-icon {
+  font-size: 36px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-green { background-color: var(--color-card-bg-green); }
+.card-blue { background-color: var(--color-card-bg-blue); }
+.card-yellow { background-color: var(--color-card-bg-yellow); }
+
+.card-green .card-icon { background-color: #d8f5d8; color: var(--color-green-primary); }
+.card-blue .card-icon { background-color: #d8e6f5; color: #4a7ab3; }
+.card-yellow .card-icon { background-color: #f5f3d8; color: #ffbf00; }
+
+.feature-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: var(--color-text-dark);
+}
+
+.feature-card p {
+  font-size: 16px;
+  color: var(--color-text-medium);
+}
+
+/* === 3. CTA FOOTER STYLES (Home Page) === */
+.footer-cta-section {
+  background-color: var(--color-green-bg-light);
+  text-align: center;
+}
+
+.cta-content {
+  padding: 75px 20px;
+}
+
+.cta-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: var(--color-text-dark);
+}
+
+.copyright-footer {
+  background-color: var(--color-dark-blue);
+  color: white;
+  padding: 25px 0;
+  font-size: 14px;
+}
+
+
+/* ============================================== */
+/* === ESTILOS NUEVOS PARA LA PÁGINA DE RECETAS === */
+/* ============================================== */
+
+/* === HEADER / NAVBAR STYLES (HeaderNavbar.jsx) === */
+.header-navbar-wrapper {
+    background-color: var(--color-recipe-header);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.navbar-logo-container {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-logo {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.navbar-links a:hover {
+    opacity: 0.8;
+}
+
+.recetas-hero {
+    text-align: center;
+    padding: 30px 20px 40px;
+    color: white;
+}
+
+.recetas-title {
+    font-size: 38px;
+    margin-bottom: 5px;
+}
+
+.recetas-subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* === RECETAS CONTENT SECTION === */
+.recetas-page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.recetas-content-section {
+    background-color: var(--color-recipe-bg);
+    padding: 40px 20px;
+    flex-grow: 1; /* Ocupa el espacio restante */
+}
+
+.recetas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* === RECETA CARD STYLES (RecetaCard.jsx) === */
+.receta-card {
+    background-color: var(--color-card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    max-width: 350px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.receta-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.receta-image-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.receta-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.receta-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.receta-info h3 {
+    font-size: 20px;
+    color: var(--color-text-dark);
+    margin-bottom: 10px;
+}
+
+.receta-info p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    min-height: 40px;
+}
+
+/* Botones específicos de la tarjeta */
+.btn-recipe-green {
+    background-color: var(--color-green-primary);
+    color: white;
+}
+.btn-recipe-red {
+    background-color: var(--color-red-secondary);
+    color: white;
+}
+
+/* === RESPONSIVE DESIGN (Ajustes de Home) === */
+@media (max-width: 992px) {
+    .hero-title { font-size: 42px; }
+    .hero-subtitle { font-size: 17px; }
+    .section-title { font-size: 28px; }
+    .features-container { gap: 25px; }
+    .feature-card { padding: 30px 15px; }
+}
+
+@media (max-width: 768px) {
+    .hero-title { font-size: 36px; }
+    .hero-subtitle { font-size: 16px; }
+    .hero-buttons { flex-direction: column; gap: 15px; }
+    .section-title { font-size: 26px; margin-bottom: 40px; }
+    .features-section { padding: 60px 15px; }
+    .feature-card { max-width: 90%; min-width: unset; }
+    .cta-content { padding: 40px 15px; }
+    .cta-content p { font-size: 18px; }
+    .btn-cta { padding: 12px 30px; font-size: 16px; }
+
+    /* Ajustes responsivos para Recetas */
+    .navbar { flex-direction: column; text-align: center; }
+    .navbar-links { margin-top: 10px; }
+    .navbar-links a { margin: 0 10px; }
+    .recetas-title { font-size: 32px; }
+}
+
+@media (max-width: 480px) {
+    .hero-title { font-size: 30px; }
+    .hero-subtitle { font-size: 15px; }
+    .hero-content { padding: 25px 20px; }
+    .section-title { font-size: 22px; }
+    .feature-card h3 { font-size: 20px; }
+    .feature-card p { font-size: 15px; }
+}
